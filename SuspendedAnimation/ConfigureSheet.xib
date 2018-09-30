@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ConfigureSheetController" customModule="SaverTest" customModuleProvider="target">
+            <connections>
+                <outlet property="canvasColorWell" destination="gt4-XW-IhQ" id="Qkh-Dd-Ph3"/>
+                <outlet property="doDownload" destination="Wwx-Wy-X01" id="3Vp-nf-Zxr"/>
+                <outlet property="doScaleUp" destination="j7H-fZ-0du" id="57I-oX-dq0"/>
+                <outlet property="subRedditsTF" destination="Ft1-hW-42f" id="LEi-bA-YCn"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="t14-la-H7W"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Suspended Animation" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="347" height="449"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="347" height="449"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="gt4-XW-IhQ">
+                        <rect key="frame" x="267" y="379" width="60" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Iwy-cN-Sbo"/>
+                        </constraints>
+                        <color key="color" red="0.69123241402651436" green="0.8785381217277487" blue="0.30508141578484366" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <action selector="updateDefaults:" target="-2" id="UMf-Yg-0PY"/>
+                        </connections>
+                    </colorWell>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frE-zk-6ul">
+                        <rect key="frame" x="18" y="342" width="231" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="26g-yF-bU4"/>
+                        </constraints>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Subreddits" id="NjG-V7-UM6">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lsB-4d-KwF">
+                        <rect key="frame" x="241" y="-50" width="92" height="155"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="bI1-BY-gUk"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ygf-Qk-bkW">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="closeConfigureSheet:" target="-2" id="D8m-7x-6Cs"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Ft1-hW-42f">
+                        <rect key="frame" x="20" y="284" width="307" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="7vI-fg-6KL"/>
+                        </constraints>
+                        <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" title="Subreddits" drawsBackground="YES" id="9em-MA-GHR">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <action selector="updateSubredit:" target="-2" id="a9g-3M-KNY"/>
+                        </connections>
+                    </textField>
+                    <button verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Wwx-Wy-X01">
+                        <rect key="frame" x="18" y="182" width="311" height="18"/>
+                        <buttonCell key="cell" type="check" title="Download new animations in the background" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="OMT-HC-Ou8">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="updateDownloadStatus:" target="-2" id="Y4w-RB-r6j"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j7H-fZ-0du">
+                        <rect key="frame" x="18" y="137" width="263" height="34"/>
+                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="JFt-ea-zme">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <string key="title">Scale up the animation to fit the screen.
+(only applies to gif and gifv)</string>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="updateScalingStatus:" target="-2" id="ywh-Jc-Z4j"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="cgb-kn-LrV">
+                        <rect key="frame" x="18" y="224" width="311" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="t63-OW-xX7"/>
+                        </constraints>
+                        <textFieldCell key="cell" selectable="YES" title="Multiple subreddits can be used buy joining them with + For example: &quot;cinemagraphs+perfectloops&quot;" id="IAX-Zu-6rx">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HQK-pL-GA7" customClass="HyperTextField" customModule="SaverTest" customModuleProvider="target">
+                        <rect key="frame" x="18" y="20" width="49" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="MVO-el-ycX"/>
+                        </constraints>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Website" id="snH-6N-qW6">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="href" value="https://github.com/ankitshekhawat/SuspendedAnimation"/>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="syD-V6-hat">
+                        <rect key="frame" x="18" y="391" width="231" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="QcZ-s6-cYH"/>
+                        </constraints>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Background" id="Fx3-ie-87z">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ft1-hW-42f" firstAttribute="top" secondItem="frE-zk-6ul" secondAttribute="bottom" constant="8" symbolic="YES" id="10Q-qn-uzd"/>
+                    <constraint firstItem="j7H-fZ-0du" firstAttribute="top" secondItem="Wwx-Wy-X01" secondAttribute="bottom" constant="15" id="1sf-or-AD9"/>
+                    <constraint firstItem="cgb-kn-LrV" firstAttribute="top" secondItem="Ft1-hW-42f" secondAttribute="bottom" constant="8" symbolic="YES" id="3je-4e-po2"/>
+                    <constraint firstItem="cgb-kn-LrV" firstAttribute="leading" secondItem="Wwx-Wy-X01" secondAttribute="leading" id="7rs-zX-iax"/>
+                    <constraint firstItem="Ft1-hW-42f" firstAttribute="leading" secondItem="cgb-kn-LrV" secondAttribute="leading" id="Bfn-F1-xue"/>
+                    <constraint firstItem="j7H-fZ-0du" firstAttribute="leading" secondItem="Wwx-Wy-X01" secondAttribute="leading" id="CZC-w4-tTa"/>
+                    <constraint firstItem="Ft1-hW-42f" firstAttribute="trailing" secondItem="cgb-kn-LrV" secondAttribute="trailing" id="I8H-8Q-66b"/>
+                    <constraint firstItem="frE-zk-6ul" firstAttribute="trailing" secondItem="syD-V6-hat" secondAttribute="trailing" id="L5P-Ap-65X"/>
+                    <constraint firstItem="Ft1-hW-42f" firstAttribute="leading" secondItem="frE-zk-6ul" secondAttribute="leading" id="TMe-y0-ef5"/>
+                    <constraint firstItem="Ft1-hW-42f" firstAttribute="leading" secondItem="HQK-pL-GA7" secondAttribute="leading" id="XPK-QK-NoW"/>
+                    <constraint firstItem="syD-V6-hat" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="YFv-z4-4Ux"/>
+                    <constraint firstItem="gt4-XW-IhQ" firstAttribute="bottom" secondItem="syD-V6-hat" secondAttribute="bottom" constant="12" id="YMJ-4L-x9e"/>
+                    <constraint firstItem="lsB-4d-KwF" firstAttribute="top" secondItem="Wwx-Wy-X01" secondAttribute="bottom" constant="83" id="ZkA-9r-kKF"/>
+                    <constraint firstItem="gt4-XW-IhQ" firstAttribute="trailing" secondItem="Ft1-hW-42f" secondAttribute="trailing" id="bgG-AB-zMx"/>
+                    <constraint firstItem="gt4-XW-IhQ" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="25" id="fMY-ms-Ct5"/>
+                    <constraint firstItem="cgb-kn-LrV" firstAttribute="trailing" secondItem="Wwx-Wy-X01" secondAttribute="trailing" id="fRV-91-ZQY"/>
+                    <constraint firstItem="Wwx-Wy-X01" firstAttribute="top" secondItem="cgb-kn-LrV" secondAttribute="bottom" constant="26" id="hYc-Sk-DV0"/>
+                    <constraint firstItem="syD-V6-hat" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="36" id="iBe-de-NqA"/>
+                    <constraint firstItem="frE-zk-6ul" firstAttribute="leading" secondItem="syD-V6-hat" secondAttribute="leading" id="iGX-eu-IEN"/>
+                    <constraint firstItem="frE-zk-6ul" firstAttribute="top" secondItem="syD-V6-hat" secondAttribute="bottom" constant="27" id="igb-di-qX0"/>
+                    <constraint firstAttribute="trailing" secondItem="gt4-XW-IhQ" secondAttribute="trailing" constant="20" symbolic="YES" id="m4P-Zj-C0W"/>
+                    <constraint firstAttribute="bottom" secondItem="lsB-4d-KwF" secondAttribute="bottom" constant="-43" id="maA-iF-lC1"/>
+                    <constraint firstItem="gt4-XW-IhQ" firstAttribute="trailing" secondItem="lsB-4d-KwF" secondAttribute="trailing" id="qrC-G2-6Bg"/>
+                    <constraint firstItem="HQK-pL-GA7" firstAttribute="bottom" secondItem="lsB-4d-KwF" secondAttribute="bottom" constant="-63" id="vzA-rv-i1z"/>
+                    <constraint firstItem="gt4-XW-IhQ" firstAttribute="leading" secondItem="syD-V6-hat" secondAttribute="trailing" constant="20" id="wh3-pa-K70"/>
+                    <constraint firstAttribute="bottom" secondItem="Ft1-hW-42f" secondAttribute="bottom" constant="284" id="zMC-XN-ZJV"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="493.5" y="781.5"/>
+        </window>
+    </objects>
+</document>
