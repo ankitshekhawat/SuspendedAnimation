@@ -31,6 +31,8 @@
 		BCECB213215F81E2002B58A0 /* GIF2MP4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECB209215F81E2002B58A0 /* GIF2MP4.swift */; };
 		BCECB21821609D84002B58A0 /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECB21721609D84002B58A0 /* HyperlinkTextField.swift */; };
 		BCECB21921609D84002B58A0 /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCECB21721609D84002B58A0 /* HyperlinkTextField.swift */; };
+		BCECB21B216119E4002B58A0 /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = BCECB21A216119E4002B58A0 /* message.png */; };
+		BCECB21C216119E4002B58A0 /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = BCECB21A216119E4002B58A0 /* message.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,7 @@
 		BCECB208215F81E2002B58A0 /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		BCECB209215F81E2002B58A0 /* GIF2MP4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIF2MP4.swift; sourceTree = "<group>"; };
 		BCECB21721609D84002B58A0 /* HyperlinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
+		BCECB21A216119E4002B58A0 /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				03F9545D1B695E0A00E47ED7 /* thumbnail.png */,
+				BCECB21A216119E4002B58A0 /* message.png */,
 				03A4851C1B644145008A2D6A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -230,6 +234,7 @@
 			files = (
 				034D858C1B64DF4D00D2EF6B /* ConfigureSheet.xib in Resources */,
 				03F9545E1B695E0A00E47ED7 /* thumbnail.png in Resources */,
+				BCECB21B216119E4002B58A0 /* message.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +244,7 @@
 			files = (
 				ACD891861DC38B790019C16F /* Assets.xcassets in Resources */,
 				ACD891891DC38B790019C16F /* MainMenu.xib in Resources */,
+				BCECB21C216119E4002B58A0 /* message.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

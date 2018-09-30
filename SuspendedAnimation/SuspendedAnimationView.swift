@@ -15,13 +15,6 @@ class SuspendedAnimationView: ScreenSaverView {
     
     var defaultsManager: DefaultsManager = DefaultsManager()
     lazy var sheetController: ConfigureSheetController = ConfigureSheetController()
-   
-    let configs = ["concurrentDownloads": 3,
-                   "convertToMp4": true,
-                   "deleteOldFiles": false,
-                   "subreddits": "cinemagraphs+perfectloops",
-                   "download": true
-        ] as [String : Any]
     
     var looper : NSObject?
     let dirPath = NSString(string: "~/Documents/cinemagraphs/").expandingTildeInPath
@@ -88,13 +81,14 @@ class SuspendedAnimationView: ScreenSaverView {
         for view in self.subviews{
             view.removeFromSuperview()
         }
-        
         if !isValid {
-            let message:NSString = "No Gifs/Videos found, downloading some will check again soon"
-            NSColor.red.setFill()
-            NSRectFill(self.bounds)
-            NSColor.white.setFill()
-            message.draw(at: NSPoint(x: 100.0, y: 200.0), withAttributes:nil)
+            let msgUrl = Bundle(for: SuspendedAnimationView.self).url(forResource:"message", withExtension: "png")
+            let messageImage = NSImage(contentsOf: msgUrl!)
+            let imageView = NSImageView(frame: NSRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
+            imageView.canDrawSubviewsIntoLayer = true
+            imageView.imageScaling = .scaleProportionallyDown
+            imageView.image = messageImage
+            self.addSubview(imageView)
             
         } else{
             if file.pathExtension == "gif" || file.pathExtension == "gifv"{
