@@ -6,7 +6,7 @@ A screensaver for macOS (10.13+) that pulls [Cinemagrpahs](https://en.wikipedia.
 
 Written in Swift 3 for macOS High Sierra (10.13+) or later. 
 
-[Download from here](https://github.com/ankitshekhawat/SuspendedAnimation/releases/latest) 
+## [Download](https://github.com/ankitshekhawat/SuspendedAnimation/releases/latest) 
 
 The screensaver creates a folder `~/Documents/cinemagraphs` for where it downloads GIFs and videos from the subreddits.
 
