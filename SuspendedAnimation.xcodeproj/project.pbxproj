@@ -406,7 +406,7 @@
 				INFOPLIST_FILE = SuspendedAnimation/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.mirkofetter.ScreenSaverMinimal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ankitshekhawat.SuspendedAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -423,7 +423,7 @@
 				INFOPLIST_FILE = SuspendedAnimation/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.mirkofetter.ScreenSaverMinimal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ankitshekhawat.SuspendedAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;

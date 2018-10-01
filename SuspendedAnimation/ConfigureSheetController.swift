@@ -64,8 +64,8 @@ class ConfigureSheetController : NSObject {
     
     @IBAction func closeConfigureSheet(_ sender: AnyObject) {
         NSColorPanel.shared().close()
-//        NSApp.endSheet(window!)
-        window!.endSheet(window!)
+//        window!.endSheet(window!)
+        NSApp.endSheet(window!)
     }
 
 }
