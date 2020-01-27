@@ -1,5 +1,5 @@
 # Suspended Animation
-A screensaver for macOS (10.13+) that pulls [Cinemagrpahs](https://en.wikipedia.org/wiki/Cinemagraph) from [Reddit](https://www.reddit.com/) to show as a screensaver.
+A screensaver for macOS (10.13+) that pulls [Cinemagraphs](https://en.wikipedia.org/wiki/Cinemagraph) from [Reddit](https://www.reddit.com/) to show as a screensaver.
 
 ![suspended animation](https://github.com/ankitshekhawat/SuspendedAnimation/raw/master/cine.gif)
 
